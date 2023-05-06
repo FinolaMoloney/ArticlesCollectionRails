@@ -1,0 +1,16 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+news_story:
+  title: News Article
+  body: Find out the latest news here
+  published: true
+
+sports_story:
+  title: Sports Article
+  body: Find out the latest sports news here
+  published: false
+
+stockMarket_story:
+  title: Stock Market Article
+  body: Find out the latest news on the stock market here
+  published: false
