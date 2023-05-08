@@ -9,8 +9,12 @@ Bundler.require(*Rails.groups)
 module ArticlesCollection
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 7.0
-
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins '*' # Allows access from any origin/domain. You should replace * with your domain if possible.
+        resource '*', headers: :any, methods: [:get, :post, :put, :patch, :delete, :options, :head]
+      end
+    end
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
